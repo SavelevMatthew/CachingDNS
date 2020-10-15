@@ -1,10 +1,17 @@
-# CachingDNS
+![# CachingDNS](./Images/CachingDNSLogo.png)
+> This utility realise Redirecting DNS Server with Cache function, so when DNS request incomes, it will look for answers in cache first and then if nothing was found will ask for help parent DNS server
 
-This utility realise Redirecting DNS Server with Cache function, so when DNS request incomes, it will look for answers in cache first and then if nothing was found will ask for help parent DNS server
+## Table of Contents
+[Installation](#installation)\
+[Configuration](#configuration)\
+[Launching](#launching)\
+[Usage Examples](#usage-examples)\
+[Current State](#current-status)\
+[Author](#author)
 
 ## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the following packages.
+Download project to your machine.
+Then use the package manager [pip](https://pip.pypa.io/en/stable/) to install the following packages.
 
 ```bash
 pip install -r requirements.txt
@@ -14,15 +21,15 @@ pip install -r requirements.txt
 
 Open **config.ini** file to set up, then change following setting if you want:
 
-ip - IP of your server, leave it 127.0.0.1 if you want to use localhost
+**ip** - IP of your server, leave it 127.0.0.1 if you want to use localhost
 
-port - don't recommend to change it, since DNS requests are usually use 53th port to communicate
+**port** - don't recommend to change it, since DNS requests are usually use 53th port to communicate
 
-max_packet_size - maximal size of a packet, which can be received (RFC says max is 512 bytes, so we dont recommend setting up less amount)
+**max_packet_size** - maximal size of a packet, which can be received (RFC says max is 512 bytes, so we dont recommend setting up less amount)
 
-parent_dns - IP of parent DNS (8.8.8.8 by default, which is Google Developer's DNS)
+**parent_dns** - IP of parent DNS (8.8.8.8 by default, which is Google Developer's DNS)
 
-cache_filename - Name of the file, where all cache information will be stored
+**cache_filename** - Name of the file, where all cache information will be stored
 
 ## Launching
 
@@ -39,9 +46,9 @@ Make sure you run it in sudo, since running server on a port, which are less tha
 python main.py
 ```
 
-## Usage
+## Usage Examples
 
-Use whatever utility you want to send DNS requests...Here is few "default" examples
+Use whatever utility you want to send DNS requests...Here is few "in-box" examples
 
 #### Mac OS / Linux
 
@@ -54,9 +61,10 @@ dig example.com @127.0.0.1
 nslookup example.com 127.0.0.1
 ```
 
+## Current Status
+Project development is finished. It works stable ang great ;)
+
 ## Author
-###  Savelev Matvey
-
-e-mail: savelevmatthew@gmail.com
-
-##### GitHub: [@SavelevMatthew](https://github.com/SavelevMatthew)
+### Savelev Matvey
+> #### Github: [@SavelevMatthew](https://github.com/SavelevMatthew)
+> ##### Email: savelevmatthew@gmail.com
